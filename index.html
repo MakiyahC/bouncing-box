@@ -62,8 +62,13 @@ var direction;
 
 		
 			if(position > boardWidth) {
-			position= -1;
+			direction= -1;
 			}
+			
+			if(position<0){
+				direction=1
+			}
+			
 			box.css('left',position);
 		};
 
