@@ -42,16 +42,39 @@
 			boardWidth = $('.board').width();
 
 			// TODO 2
-
-
+var position;
+var points;
+var speed;
+var direction;		
+		position=0;
+		points=0;
+		speed=10;
+		direction=1;
+		
+		box.css("left, position");
+		box.text(points);
+		
+		
+		
 			// TODO 3 / 4
 			update = function() {
+				position=position + (direction*speed);
 
-			};
+		
+			if(position > boardWidth) {
+			position= -1;
+			}
+			box.css('left',position);
+		};
 
 
 			// TODO 5 / 6
 			handleBoxClick = function() {
+				speed=speed + 3;
+				position=0;
+				points=points+1;
+				box.text(points);
+				
 
 			};
 
